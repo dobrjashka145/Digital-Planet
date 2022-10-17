@@ -1,4 +1,11 @@
+.section-footer {
+  margin-top: 57px;
+}
+
 .section-footer__scrolldown {
+  position: relative;
+  display: block;
+  padding-bottom: 20px;
   font-weight: 400;
   font-size: 11px;
   line-height: 15px;
@@ -8,4 +15,27 @@
   text-transform: uppercase;
   color: @font-color-base;
   opacity: 0.5;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    left: calc(50% - 12px);
+    top: calc(20% + 7px);
+    background-image: url("../../img/icons/arrow-left.svg");
+    background-size: 7px 15px;
+    transform: rotate(-90deg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-footer__scrolldown-text {
+  display: none;
+
+  &--intro {
+    display: block;
+  }
 }

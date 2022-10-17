@@ -1,3 +1,8 @@
+.questions__list {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
 .questions__item {
   padding-bottom: 10px;
   line-height: 22px;
@@ -10,12 +15,27 @@
 }
 
 .questions__problem {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 8px;
   padding-right: 40px;
   font-size: @font-size-text-larger;
   font-weight: 500;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: @green-darker;
+    background-image: url("../../img/icons/plus.svg");
+    background-size: 16px 16px;
+    background-position: calc(50% + 2px) calc(50% - 2px);
+    background-repeat: no-repeat;
+  }
 }
 
 .questions__answer {

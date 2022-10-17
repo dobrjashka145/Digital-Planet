@@ -1,10 +1,24 @@
+.feedback-form {
+  padding-right: 8px;
+}
+
 .feedback-form__input {
   width: 100%;
+  margin-bottom: 10px;
   padding: 15px;
   font-family: @font-family-base;
   font-size: @font-size-text-smaller;
   line-height: 17px;
   color: fade(@grey-1c, 40%);
   background-color: @white;
+  border: none;
   box-sizing: border-box;
+
+  &--textarea {
+    min-height: 165px;
+  }
+}
+
+.feedback-form__submit {
+  margin-top: 10px;
 }

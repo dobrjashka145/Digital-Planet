@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Digital Planet VR</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font">
@@ -12,296 +12,378 @@
   </head>
 
   <body class="page-body">
-    <header class="page-header page-container">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/content/logo.svg" width="28" height="28" alt="Логотип виртуального планетария Digital Planet VR">
-        <div class="page-header__logo-text">Digital Planet</div>
-      </a>
-
-      <nav class="page-header__nav main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#product">О продукте</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#work">Как работает</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#technology">Технология</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#questions">Вопросы</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-
-      <button class="page-header__booking button-base" type="button">Заказать</button>
-      <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
-
-      <a class="page-header__phone" href="tel:8(800)5553575">8(800) 555 35 75</a>
-      <div class="page-header__social social">
-        <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
-        <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-      </div>
-    </header>
-
     <main class="page-main">
-      <div class="page-container">
-        <section class="intro">
-          <h1 class="intro__title">Digital Planet VR</h1>
-
-          <p class="intro__text">Образовательный виртуальный планетарий в Новороссийске. Познавательное приключение в мир звёзд и галактик.</p>
-
-          <button class="intro__booking button-base button-base--big button-base--big-fill" type="button">Заказать</button>
-          <button class="intro__video button-base button-base--big" type="button">Видео</button>
-
-          <footer class="intro__footer section-footer">
-            <a class="section-footer__scrolldown" href="#product">
-              <span class="section-footer__scrolldown-text">Скролл вниз</span>
+      <div class="page-bg-container page-bg-container--intro">
+        <div class="page-container">
+          <header class="page-header">
+            <a class="page-header__logo">
+              <img class="page-header__logo-image" src="img/content/logo.svg" width="28" height="28" alt="Логотип виртуального планетария Digital Planet VR">
+              <div class="page-header__logo-text">Digital Planet</div>
             </a>
-          </footer>
-        </section>
+
+            <nav class="page-header__nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#product">О продукте</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#work">Как работает</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#technology">Технология</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#questions">Вопросы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button class="page-header__booking button-base" type="button">Заказать</button>
+            <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
+
+            <div class="page-header__contacts">
+              <a class="page-header__phone" href="tel:8(800)5553575">8(800) 555 35 75</a>
+              <div class="page-header__social social">
+                <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              </div>
+            </div>
+          </header>
+
+          <section class="intro">
+            <h1 class="intro__title">Digital Planet VR</h1>
+
+            <p class="intro__text">Образовательный виртуальный планетарий в Новороссийске.<br>Познавательное приключение в мир звёзд и галактик.</p>
+
+            <button class="intro__booking button-base button-base--big button-base--big-fill" type="button">Заказать</button>
+            <button class="intro__video button-base button-base--big" type="button">Видео</button>
+
+            <footer class="intro__footer section-footer section-footer">
+              <a class="section-footer__scrolldown" href="#product">
+                <span class="section-footer__scrolldown-text section-footer__scrolldown-text--intro">Скролл вниз</span>
+              </a>
+            </footer>
+          </section>
+        </div>
       </div>
 
-      <div class="page-container">
-        <section class="product" id="product">
-          <h2 class="product__title section-title">Что такое VR-планетарий?</h2>
-
-          <p class="product__description">Это образовательная программа, использующая технологию виртуальной реальности.</p>
-          <p class="product__description">Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии и обществознании.</p>
-          <p class="product__description">За счёт реалистичности и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка.</p>
-
-          <div class="product__slider slider">
-            <h3 class="slider__title slider__title--product">Что показываем в планетарии</h3>
-            <img class="slider__image slider__image--product" src="img/content/21-astronaut-in-outer-space_mobile@1x.jpg" width="288" height="180" alt="Астронавт в открытом космосе">
-            <div class="slider__counter">
-              <span class="slider__number-image">01/</span>06
-            </div>
-            <div class="slider__controls">
-              <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-              <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-            </div>
-          </div>
-
-          <footer class="product__footer section-footer">
-            <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#work">
-              <span class="section-footer__scrolldown-text">Скролл вниз</span>
+      <div class="page-bg-container page-bg-container--inner">
+        <div class="page-container">
+          <header class="page-header">
+            <a class="page-header__logo">
+              <img class="page-header__logo-image" src="img/content/logo.svg" width="28" height="28" alt="Логотип виртуального планетария Digital Planet VR">
+              <div class="page-header__logo-text">Digital Planet</div>
             </a>
-          </footer>
-        </section>
 
-        <section class="work" id="work">
-          <h2 class="work__title section-title">Как это работает?</h2>
+            <nav class="page-header__nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#product">О продукте</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#work">Как работает</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#technology">Технология</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#questions">Вопросы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
 
-          <div class="work__slider slider">
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/31-prepare-vr-glasses@1x.jpg" width="195" height="130" alt="Готовим инвентарь">
-              <h3 class="slider__title section-subtitle">Готовим инвентарь</h3>
-              <p class="slider__description">Наши специалисты готовят каждые VR-очки к использованию, обрабатывая устройства специальным средством для ухода после каждого сеанса.</p>
+            <button class="page-header__booking button-base" type="button">Заказать</button>
+            <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
 
-              <div class="slider__counter">
-                <span class="slider__number-image">01/</span>04
+            <div class="page-header__contacts">
+              <a class="page-header__phone" href="tel:8(800)5553575">8(800) 555 35 75</a>
+              <div class="page-header__social social">
+                <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              </div>
+            </div>
+          </header>
+
+          <section class="product" id="product">
+            <h2 class="product__title section-title">Что такое VR-планетарий?</h2>
+
+            <div class="product__description">
+              <p>Это образовательная программа, использующая технологию виртуальной реальности.</p>
+              <p>Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии и обществознании.</p>
+              <p>За счёт реалистичности и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка.</p>
+            </div>
+
+            <div class="product__slider slider">
+              <h3 class="slider__title slider__title--product">Что показываем в планетарии</h3>
+              <div class="slider__image-container">
+                <img class="slider__image slider__image--product" src="img/content/21-astronaut-in-outer-space_mobile@1x.jpg" width="288" height="180" alt="Астронавт в открытом космосе">
               </div>
               <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                <p class="slider__counter"><span>01/</span>06</p>
+                <div class="slider__button-container">
+                  <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                </div>
               </div>
             </div>
 
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/32-choose-movie@1x.jpg" width="195" height="130" alt="Выбираем фильм">
-              <h3 class="slider__title section-subtitle">Выбираем фильм</h3>
-              <p class="slider__description">В нашем архиве есть образовательные фильмы по теме космоса, астрономии и обществознания. Мы работаем с самым крупным производителем мультимедиа продуктов в РФ.</p>
+            <footer class="product__footer section-footer">
+              <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#work">
+                <span class="section-footer__scrolldown-text">Скролл вниз</span>
+              </a>
+            </footer>
+          </section>
 
-              <div class="slider__counter">
-                <span class="slider__number-image">02/</span>04
+          <section class="work" id="work">
+            <h2 class="work__title section-title">Как это работает?</h2>
+
+            <div class="work__slider slider">
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/31-prepare-vr-glasses@1x.jpg" width="195" height="130" alt="Готовим инвентарь">
+                </div>
+                <div class="slider__text-container slider__text-container--work">
+                  <h3 class="slider__title slider__title--work section-subtitle">Готовим инвентарь</h3>
+                  <p class="slider__description">Наши специалисты готовят каждые VR-очки к использованию, обрабатывая устройства специальным средством для ухода после каждого сеанса.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>01/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/32-choose-movie@1x.jpg" width="195" height="130" alt="Выбираем фильм">
+                </div>
+                <div class="slider__text-container slider__text-container--work">
+                  <h3 class="slider__title slider__title--work section-subtitle">Выбираем фильм</h3>
+                  <p class="slider__description">В нашем архиве есть образовательные фильмы по теме космоса, астрономии и обществознания. Мы работаем с самым крупным производителем мультимедиа продуктов в РФ.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>02/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/33-put-on-vr-glasses@1x.jpg" width="195" height="130" alt="Надеваем VR-очки">
-              <h3 class="slider__title section-subtitle">Надеваем VR-очки</h3>
-              <p class="slider__description">Ученики получают VR-очки, наш техник помогает им разобраться, как правильно надеть очки и закрепить их на голове.  Для ребят со зрением, отличным от 100%, техник настраивает диоптрии.</p>
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/33-put-on-vr-glasses@1x.jpg" width="195" height="130" alt="Надеваем VR-очки">
+                </div>
+                <div class="slider__text-container slider__text-container--work">
+                  <h3 class="slider__title slider__title--work section-subtitle">Надеваем VR-очки</h3>
+                  <p class="slider__description">Ученики получают VR-очки, наш техник помогает им разобраться, как правильно надеть очки и закрепить их на голове.  Для ребят со зрением, отличным от 100%, техник настраивает диоптрии.</p>
+                </div>
 
-              <div class="slider__counter">
-                <span class="slider__number-image">03/</span>04
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>03/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-              </div>
-            </div>
 
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/34-explore-galaxies@1x.jpg" width="195" height="130" alt="Исследуем галактики">
-              <h3 class="slider__title section-subtitle">Исследуем галактики!</h3>
-              <p class="slider__description">Ребята окунаются в виртуальные миры и с удовольтсием изучают всё вокруг. После показа остаются яркие эмоции и запоминаются важные моменты о планетах, звёздах и галактиках.</p>
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/34-explore-galaxies@1x.jpg" width="195" height="130" alt="Исследуем галактики">
+                </div>
+                <div class="slider__text-container slider__text-container--work">
+                  <h3 class="slider__title slider__title--work section-subtitle">Исследуем галактики!</h3>
+                  <p class="slider__description">Ребята окунаются в виртуальные миры и с удовольтсием изучают всё вокруг. После показа остаются яркие эмоции и запоминаются важные моменты о планетах, звёздах и галактиках.</p>
+                </div>
 
-              <div class="slider__counter">
-                <span class="slider__number-image">04/</span>04
-              </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-              </div>
-            </div>
-          </div>
-
-          <footer class="work__footer section-footer">
-            <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#technology">
-              <span class="section-footer__scrolldown-text">Скролл вниз</span>
-            </a>
-          </footer>
-        </section>
-
-        <section class="technology" id="technology">
-          <h2 class="technology__title section-title">VR-технология</h2>
-
-          <div class="technology__slider slider">
-            <div class="slider__container">
-              <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Фирменный товар">
-              <h3 class="slider__title section-subtitle">Masters Glass VR-iii</h3>
-              <p class="slider__description">Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра, как при прогулке, за счёт качественного объемного изображения.</p>
-
-              <div class="slider__counter">
-                <span class="slider__number-image">01/</span>04
-              </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-              </div>
-            </div>
-
-            <div class="slider__container">
-              <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Качественное оборудование">
-              <h3 class="slider__title section-subtitle">Оборудование</h3>
-              <p class="slider__description">Все фильмы воспроизводятся при помощи встроенных в очки экранов мобильных телефонов ведущих брендов. Наши техники привезут всё оборудование с собой, от вас нужно лишь помещение для урока.</p>
-
-              <div class="slider__counter">
-                <span class="slider__number-image">02/</span>04
-              </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-              </div>
-            </div>
-
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Гарантированная безопасность">
-              <h3 class="slider__title section-subtitle">Безопасность</h3>
-              <p class="slider__description">Зритель всегда находится в центре зала, и четко зафиксирован в пространстве, что делает просмотр понятным и комфортным. Технология виртуальной реальности не портит зрение, а эффект присутствия развивает креативность и пространственное мышление.</p>
-
-              <div class="slider__counter">
-                <span class="slider__number-image">03/</span>04
-              </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>04/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="slider__container">
-              <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Удобное крепление">
-              <h3 class="slider__title section-subtitle">Система крепления</h3>
-              <p class="slider__description">Подходит под любой размер головы, даже для первоклассника. Во время
-              просмотра не наносится вред голове ребёнка за счёт тщательно проработанной конструкции очков.</p>
+            <footer class="work__footer section-footer">
+              <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#technology">
+                <span class="section-footer__scrolldown-text">Скролл вниз</span>
+              </a>
+            </footer>
+          </section>
 
-              <div class="slider__counter">
-                <span class="slider__number-image">04/</span>04
+          <section class="technology" id="technology">
+            <h2 class="technology__title section-title">VR-технология</h2>
+
+            <div class="technology__slider slider">
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Фирменный товар">
+                </div>
+                <div class="slider__text-container slider__text-container--technology">
+                  <h3 class="slider__title section-subtitle">Masters Glass VR-iii</h3>
+                  <p class="slider__description">Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра, как при прогулке, за счёт качественного объемного изображения.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>01/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
-              <div class="slider__controls">
-                <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Качественное оборудование">
+                </div>
+                <div class="slider__text-container slider__text-container--technology">
+                  <h3 class="slider__title section-subtitle">Оборудование</h3>
+                  <p class="slider__description">Все фильмы воспроизводятся при помощи встроенных в очки экранов мобильных телефонов ведущих брендов. Наши техники привезут всё оборудование с собой, от вас нужно лишь помещение для урока.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>02/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Гарантированная безопасность">
+                </div>
+                <div class="slider__text-container slider__text-container--technology">
+                  <h3 class="slider__title section-subtitle">Безопасность</h3>
+                  <p class="slider__description">Зритель всегда находится в центре зала, и четко зафиксирован в пространстве, что делает просмотр понятным и комфортным. Технология виртуальной реальности не портит зрение, а эффект присутствия развивает креативность и пространственное мышление.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>03/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider__container">
+                <div class="slider__image-container">
+                  <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Удобное крепление">
+                </div>
+                <div class="slider__text-container slider__text-container--technology">
+                  <h3 class="slider__title section-subtitle">Система крепления</h3>
+                  <p class="slider__description">Подходит под любой размер головы, даже для первоклассника. Во время просмотра невозможно повредить голову ребёнка за счёт тщательно проработанной конструкции очков.</p>
+                </div>
+
+                <div class="slider__controls">
+                  <p class="slider__counter"><span>04/</span>04</p>
+                  <div class="slider__button-container">
+                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <footer class="technology__footer section-footer">
-            <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#questions">
-              <span class="section-footer__scrolldown-text">Скролл вниз</span>
-            </a>
-          </footer>
-        </section>
+            <footer class="technology__footer section-footer">
+              <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#questions">
+                <span class="section-footer__scrolldown-text">Скролл вниз</span>
+              </a>
+            </footer>
+          </section>
 
-        <section class="questions" id="questions">
-          <h2 class="questions__title section-title">Часто задаваемые вопросы</h2>
+          <section class="questions" id="questions">
+            <h2 class="questions__title section-title">Часто задаваемые вопросы</h2>
 
-          <dl class="questions__list">
-            <div class="questions__item">
-              <dt class="questions__problem">Сколько длится сеанс? Дети не устают во время просмотра?</dt>
-              <dd class="questions__answer">Сеанс обучающего фильма длится не более 50 минут, его продолжительность зависит от возраста ребенка. Просматривая фильмы в VR-очках, дети устают не больше, чем от обычных двумерных дисплеев.</dd>
+            <dl class="questions__list">
+              <div class="questions__item">
+                <dt class="questions__problem">Сколько длится сеанс? Дети не устают во время просмотра?</dt>
+                <dd class="questions__answer">Сеанс обучающего фильма длится не более 50 минут, его продолжительность зависит от возраста ребенка. Просматривая фильмы в VR-очках, дети устают не больше, чем от обычных двумерных дисплеев.</dd>
+              </div>
+              <div class="questions__item">
+                <dt class="questions__problem">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</dt>
+                <dd class="questions__answer">VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения и опыта использования аналогичных продуктов, мог безопасно и легко пользоваться этой технологией. У нас есть сертификат качества продукции и лицензия для её использования на территории РФ.Для людей с зрением, отличным от идеального, на VR-очках предусмотрена регулировка диоптрий.</dd>
+              </div>
+              <div class="questions__item">
+                <dt class="questions__problem">Действительно ли это образовательный метод, или это лишь игрушка?</dt>
+                <dd class="questions__answer">Это увлекательный урок в формате виртуальной реальности. Дети получают знания за пределами наскучивших учебников, но остаются в пределах школьного кабинета. Использование современных технологий предоставляет им возможность увидеть и ощутить неизведанные миры. Они смотрят на новый материал изнутри, визуализация помогает запомнить и понять самые сложные темы.</dd>
+              </div>
+              <div class="questions__item">
+                <dt class="questions__problem">Всё понятно! Хочу заказать выезд VR планетария, что нужно сделать?</dt>
+                <dd class="questions__answer">Заполните форму заказа, оставьте ваши контактные данные. Мы обработаем заявку в течении двух рабочих дней и перезвоним вам, подробно ответим на все интересующие вопросы.</dd>
+              </div>
+            </dl>
+
+            <footer class="questions__footer section-footer">
+              <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#contacts">
+                <span class="section-footer__scrolldown-text">Скролл вниз</span>
+              </a>
+            </footer>
+          </section>
+
+          <section class="contacts" id="contacts">
+            <h2 class="contacts__title section-title">Контакты</h2>
+
+            <dl class="contacts__list">
+              <div class="contacts__item">
+                <dt class="contacts__city section-subtitle">Новороссийск</dt>
+                <dd class="contacts__phone">+7 (923) 465 – 01 – 41</dd>
+                <dd class="contacts__email">digitalPlanetNR@mail.ru</dd>
+              </div>
+              <div class="contacts__item">
+                <dt class="contacts__city section-subtitle">Москва</dt>
+                <dd class="contacts__phone">+7 (495) 855 – 24 – 19</dd>
+                <dd class="contacts__email">digitalPlanetMoscow@mail.ru</dd>
+              </div>
+              <div class="contacts__item">
+                <dt class="contacts__city section-subtitle">Саратов</dt>
+                <dd class="contacts__phone">+7 (942) 221 – 21 – 78</dd>
+                <dd class="contacts__email">digitalPlanetSaratov@mail.ru</dd>
+              </div>
+            </dl>
+
+            <div class="contacts__feedback feedback">
+              <h3 class="feedback__title section-subtitle">Остались вопросы? Задайте их нам!</h3>
+              <p class="feedback__text">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
+
+              <form class="feedback__form feedback-form" action="#" method="get">
+                <label aria-label="Имя">
+                  <input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя" required>
+                </label>
+                <label aria-label="Email">
+                  <input class="feedback-form__input" type="email" name="email" placeholder="Ваш e-mail" required>
+                </label>
+                <label aria-label="Вопрос">
+                  <textarea class="feedback-form__input feedback-form__input--textarea" name="question" placeholder="Что вас интересует?"></textarea>
+                </label>
+
+                <button class="feedback-form__submit button-base" type="submit">Отправить</button>
+              </form>
             </div>
-            <div class="questions__item">
-              <dt class="questions__problem">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</dt>
-              <dd class="questions__answer">VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения и опыта использования аналогичных продуктов, мог безопасно и легко пользоваться этой технологией. У нас есть сертификат качества продукции и лицензия для её использования на территории РФ.Для людей с зрением, отличным от идеального, на VR-очках предусмотрена регулировка диоптрий.</dd>
-            </div>
-            <div class="questions__item">
-              <dt class="questions__problem">Действительно ли это образовательный метод, или это лишь игрушка?</dt>
-              <dd class="questions__answer">Это увлекательный урок в формате виртуальной реальности. Дети получают знания за пределами наскучивших учебников, но остаются в пределах школьного кабинета. Использование современных технологий предоставляет им возможность увидеть и ощутить неизведанные миры. Они смотрят на новый материал изнутри, визуализация помогает запомнить и понять самые сложные темы.</dd>
-            </div>
-            <div class="questions__item">
-              <dt class="questions__problem">Всё понятно! Хочу заказать выезд VR планетария, что нужно сделать?</dt>
-              <dd class="questions__answer">Заполните форму заказа, оставьте ваши контактные данные. Мы обработаем заявку в течении двух рабочих дней и перезвоним вам, подробно ответим на все интересующие вопросы.</dd>
-            </div>
-          </dl>
-
-          <footer class="questions__footer section-footer">
-            <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#contacts">
-              <span class="section-footer__scrolldown-text">Скролл вниз</span>
-            </a>
-          </footer>
-        </section>
-
-        <section class="contacts" id="contacts">
-          <h2 class="contacts__title section-title">Контакты</h2>
-
-          <dl class="contacts__list">
-            <div class="contacts__item">
-              <dt class="contacts__city section-subtitle">Новороссийск</dt>
-              <dd class="contacts__phone">+7 (923) 465 – 01 – 41</dd>
-              <dd class="contacts__email">digitalPlanetNR@mail.ru</dd>
-            </div>
-            <div class="contacts__item">
-              <dt class="contacts__city section-subtitle">Москва</dt>
-              <dd class="contacts__phone">+7 (495) 855 – 24 – 19</dd>
-              <dd class="contacts__email">digitalPlanetMoscow@mail.ru</dd>
-            </div>
-            <div class="contacts__item">
-              <dt class="contacts__city section-subtitle">Саратов</dt>
-              <dd class="contacts__phone">+7 (942) 221 – 21 – 78</dd>
-              <dd class="contacts__email">digitalPlanetSaratov@mail.ru</dd>
-            </div>
-          </dl>
-
-          <div class="contacts__feedback feedback">
-            <h3 class="feedback__title section-subtitle">Остались вопросы? Задайте их нам!</h3>
-            <p class="feedback__text">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
-
-            <form class="feedback__form feedback-form" action="#" method="get">
-              <label aria-label="Имя">
-                <input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя" required>
-              </label>
-              <label aria-label="Email">
-                <input class="feedback-form__input" type="email" name="email" placeholder="Ваш e-mail" required>
-              </label>
-              <label aria-label="Вопрос">
-                <textarea class="feedback-form__input form__input-textarea" name="question" placeholder="Что вас интересует?"></textarea>
-              </label>
-
-              <button class="form__button-submit button-base" type="submit">Отправить</button>
-            </form>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </main>
 
