@@ -5,11 +5,12 @@
   background-repeat: no-repeat;
 
 
-  // @media (min-width: @desktop-width) {
-  //   padding: 0;
-  //   background-image: url("../../img/bg-intro@1x.jpg");
-  //   background-position: 0 0;
-  // }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    background-image: url("../../img/kid_VR@1x.png"), url("../../img/bg-intro-mask@1x.png"), url("../../img/bg-intro@1x.jpg");
+    background-position: right bottom, 0 -50px, 0 -50px;
+    background-size: auto 350px, auto 110%, 110% auto;
+  }
 }
 
 .page-bg-container--inner {

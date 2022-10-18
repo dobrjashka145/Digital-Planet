@@ -15,12 +15,22 @@
 
   &--big {
     display: block;
-    width: 207px;
+    min-width: 207px;
     padding: 15px 29px;
-    font-size: @font-size-button-big;
+    padding-left: 69px;
+    font-size: 18px;
     line-height: 21px;
+    text-align: center;
     border: 3px solid @green-darker;
     border-radius: 3px;
+
+    @media (min-width: @desktop-width) {
+      min-width: 238px;
+      padding: 19px 40px;
+      padding-left: 82px;
+      font-size: 21px;
+      line-height: 24px;
+    }
   }
 
   &--big-fill {

@@ -3,6 +3,12 @@
   padding-bottom: 50px;
   padding-left: 4px;
   padding-right: 4px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 0;
+  }
 }
 
 .main-nav__list {
@@ -11,13 +17,17 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    padding-left: 80px;
-    padding-right: 80px;
   }
 }
 
 .main-nav__item {
   padding: 8px 24px;
+
+  &--primary {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 10px;

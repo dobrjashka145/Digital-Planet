@@ -1,5 +1,14 @@
 .section-footer {
-  margin-top: 57px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+
+.section-footer__social {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 .section-footer__scrolldown {
@@ -29,6 +38,10 @@
     transform: rotate(-90deg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -140px;
   }
 }
 
