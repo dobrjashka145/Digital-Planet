@@ -91,7 +91,7 @@
                   <a class="main-nav__link">Главная</a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="#product">О продукте</a>
+                  <a class="main-nav__link main-nav__link--active" href="#product">О продукте</a>
                 </li>
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="#work">Как работает</a>
@@ -121,27 +121,33 @@
           </header>
 
           <section class="product page-section" id="product">
-            <h2 class="product__title section-title">Что такое VR-планетарий?</h2>
+            <div class="product__content-container">
+              <h2 class="product__title section-title">Что такое VR-планетарий?</h2>
 
-            <div class="product__description">
-              <p>Это образовательная программа, использующая технологию виртуальной реальности.</p>
-              <p>Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии и обществознании.</p>
-              <p>За счёт реалистичности и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка.</p>
-            </div>
-
-            <div class="product__slider slider">
-              <h3 class="slider__title slider__title--product">Что показываем в планетарии</h3>
-              <div class="slider__image-container">
-                <img class="slider__image slider__image--product" src="img/content/21-astronaut-in-outer-space_mobile@1x.jpg" width="288" height="180" alt="Астронавт в открытом космосе">
+              <div class="product__description">
+                <p>Это образовательная программа, использующая технологию виртуальной реальности.</p>
+                <p>Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии и обществознании.</p>
+                <p>За счёт реалистичности и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка.</p>
               </div>
-              <div class="slider__controls">
-                <p class="slider__counter"><span>01/</span>06</p>
-                <div class="slider__button-container">
-                  <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                  <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
+
+                <h3 class="product__slider-title slider-title slider-title--product">Что показываем в планетарии</h3>
+                <div class="product__slider-image slider-picture">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="img/content/21-astronaut-in-outer-space_desktop@1x.jpg 1x, img/content/21-astronaut-in-outer-space_desktop@2x.jpg 2x">
+                    <img class="slider-picture__image slider-picture__image--product" src="img/content/21-astronaut-in-outer-space_mobile@1x.jpg"
+                    srcset="img/content/21-astronaut-in-outer-space_desktop@1x.jpg 1x, img/content/21-astronaut-in-outer-space_desktop@2x.jpg 2x"
+                    width="288" height="180" alt="Астронавт в открытом космосе">
+                  </picture>
+                </div>
+                <div class="product__slider-controls slider-controls">
+                  <p class="slider-controls__counter"><span>01/</span>06</p>
+                  <div class="slider-controls__button-container">
+                    <button class="slider-controls__button slider-controls__button--prev" type="button" aria-label="Назад"></button>
+                    <button class="slider-controls__button slider-controls__button--next" type="button" aria-label="Вперед"></button>
+                  </div>
                 </div>
               </div>
-            </div>
 
             <footer class="product__footer section-footer">
               <a class="section-footer__scrolldown section-footer__scrolldown--inner" href="#work">

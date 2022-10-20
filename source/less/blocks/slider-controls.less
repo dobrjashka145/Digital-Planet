@@ -1,0 +1,46 @@
+.slider-controls {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.slider-controls__counter {
+  margin: 0;
+  padding: 13px 21px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: @grey-ab;
+  opacity: 0.87;
+}
+
+.slider-controls__counter span {
+  font-weight: 500;
+  color: @white;
+}
+
+.slider-controls__button-container {
+  display: flex;
+}
+
+.slider-controls__button {
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 48px;
+  background-color: @grey-1c;
+  background-size: 9px 16px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../../img/icons/arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/icons/arrow-left.svg");
+    transform: scale(-1);
+  }
+}

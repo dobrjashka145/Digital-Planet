@@ -1,8 +1,10 @@
 .section-footer {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: auto;
-  align-items: center;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+  }
 }
 
 .section-footer__social {
@@ -41,6 +43,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 3";
     margin-left: -140px;
   }
 }

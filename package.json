@@ -2,7 +2,8 @@
   "name": "digital-planet",
   "private": true,
   "description": "Сайт образовательного виртуального планетария Digital Planet VR",
-  "author": "Oksana Savinova <dobrjashka145@gmail.com>",
+  "author": "Oksana Savinova (https://github.com/dobrjashka145)",
+  "contributor": "Andrey Grachev (https://github.com/andreysgra)",
   "repository": "github:dobrjashka145/Digital-Planet",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
