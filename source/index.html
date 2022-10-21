@@ -133,7 +133,7 @@
               <h3 class="product__slider-title slider-title slider-title--product">Что показываем в планетарии</h3>
               <div class="product__slider-picture slider-picture">
                 <picture>
-                  <source media="(min-width: 1440px)"
+                  <source media="(min-width: @desktop-width)"
                     srcset="img/content/21-astronaut-in-outer-space_desktop@1x.jpg 1x, img/content/21-astronaut-in-outer-space_desktop@2x.jpg 2x">
                   <img class="slider-picture__image slider-picture__image--product" src="img/content/21-astronaut-in-outer-space_mobile@1x.jpg"
                   srcset="img/content/21-astronaut-in-outer-space_desktop@1x.jpg 1x, img/content/21-astronaut-in-outer-space_desktop@2x.jpg 2x"
@@ -237,78 +237,72 @@
           </section>
 
           <section class="technology page-section" id="technology">
-            <h2 class="technology__title section-title">VR-технология</h2>
+            <div class="technology__content-container">
+              <h2 class="technology__title section-title">VR-технология</h2>
 
-            <div class="technology__slider slider">
-              <div class="slider__container">
-                <div class="slider__image-container">
-                  <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Фирменный товар">
-                </div>
-                <div class="slider__text-container slider__text-container--technology">
-                  <h3 class="slider__title section-subtitle">Masters Glass VR-iii</h3>
-                  <p class="slider__description">Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра, как при прогулке, за счёт качественного объемного изображения.</p>
-                </div>
-
-                <div class="slider__controls">
-                  <p class="slider__counter"><span>01/</span>04</p>
-                  <div class="slider__button-container">
-                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-                  </div>
+              <div class="technology__slider-picture slider-picture">
+                <picture>
+                  <source media="(min-width: @desktop-width)"
+                    srcset="img/content/vr-glasses-desktop@1x.png 1x, img/content/vr-glasses-desktop@2x.png 2x">
+                  <img class="slider-picture__image slider-picture__image--technology" src="img/content/vr-glasses-mobile@1x.png"
+                  srcset="img/content/vr-glasses-desktop@1x.png 1x, img/content/vr-glasses-desktop@2x.png 2x"
+                  width="296" height="152" alt="Фирменный товар">
+                </picture>
+              </div>
+              <div class="technology__slider-text slider-text slider-text--technology">
+                <h3 class="slider-text__title section-subtitle">Masters Glass VR-iii</h3>
+                <p class="slider-text__description">Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. За счет качественного объемного изображения напряжение глаз во время просмотра такое же, как и при прогулке.</p>
+              </div>
+              <div class="technology__slider-controls slider-controls">
+                <p class="slider-controls__counter"><span>01/</span>04</p>
+                <div class="slider-controls__button-container">
+                  <button class="slider-controls__button slider-controls__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="slider-controls__button slider-controls__button--next" type="button" aria-label="Вперед"></button>
                 </div>
               </div>
 
-              <div class="slider__container">
-                <div class="slider__image-container">
-                  <img class="slider__image slider__image--technology" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Качественное оборудование">
-                </div>
-                <div class="slider__text-container slider__text-container--technology">
-                  <h3 class="slider__title section-subtitle">Оборудование</h3>
-                  <p class="slider__description">Все фильмы воспроизводятся при помощи встроенных в очки экранов мобильных телефонов ведущих брендов. Наши техники привезут всё оборудование с собой, от вас нужно лишь помещение для урока.</p>
-                </div>
-
-                <div class="slider__controls">
-                  <p class="slider__counter"><span>02/</span>04</p>
-                  <div class="slider__button-container">
-                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-                  </div>
+              <div class="technology__slider-picture slider-picture">
+                <img class="slider-picture__image slider-picture__image--technology" src="img/content/vr-glasses-mobile@1x.png" width="296" height="152" alt="Качественное оборудование">
+              </div>
+              <div class="technology__slider-text slider-text slider-text--technology">
+                <h3 class="slider-text__title section-subtitle">Оборудование</h3>
+                <p class="slider-text__description">Все фильмы воспроизводятся при помощи встроенных в очки экранов мобильных телефонов ведущих брендов. Наши техники привезут всё оборудование с собой, от вас нужно лишь помещение для урока.</p>
+              </div>
+              <div class="technology__slider-controls slider-controls">
+                <p class="slider-controls__counter"><span>02/</span>04</p>
+                <div class="slider-controls__button-container">
+                  <button class="slider-controls__button slider-controls__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="slider-controls__button slider-controls__button--next" type="button" aria-label="Вперед"></button>
                 </div>
               </div>
 
-              <div class="slider__container">
-                <div class="slider__image-container">
-                  <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Гарантированная безопасность">
-                </div>
-                <div class="slider__text-container slider__text-container--technology">
-                  <h3 class="slider__title section-subtitle">Безопасность</h3>
-                  <p class="slider__description">Зритель всегда находится в центре зала, и четко зафиксирован в пространстве, что делает просмотр понятным и комфортным. Технология виртуальной реальности не портит зрение, а эффект присутствия развивает креативность и пространственное мышление.</p>
-                </div>
-
-                <div class="slider__controls">
-                  <p class="slider__counter"><span>03/</span>04</p>
-                  <div class="slider__button-container">
-                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-                  </div>
+              <div class="technology__slider-picture slider-picture">
+                <img class="slider-picture__image slider__image--technology" src="img/content/vr-glasses-mobile@1x.png" width="296" height="152" alt="Гарантированная безопасность">
+              </div>
+              <div class="technology__slider-text slider-text slider-text--technology">
+                <h3 class="slider-text__title section-subtitle">Безопасность</h3>
+                <p class="slider-text__description">Зритель всегда находится в центре зала, и четко зафиксирован в пространстве, что делает просмотр понятным и комфортным. Технология виртуальной реальности не портит зрение, а эффект присутствия развивает креативность и пространственное мышление.</p>
+              </div>
+              <div class="technology__slider-controls slider-controls">
+                <p class="slider-controls__counter"><span>03/</span>04</p>
+                <div class="slider-controls__button-container">
+                  <button class="slider-controls__button slider-controls__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="slider-controls__button slider-controls__button--next" type="button" aria-label="Вперед"></button>
                 </div>
               </div>
 
-              <div class="slider__container">
-                <div class="slider__image-container">
-                  <img class="slider__image slider__image--work" src="img/content/vr-glasses@1x.png" width="296" height="152" alt="Удобное крепление">
-                </div>
-                <div class="slider__text-container slider__text-container--technology">
-                  <h3 class="slider__title section-subtitle">Система крепления</h3>
-                  <p class="slider__description">Подходит под любой размер головы, даже для первоклассника. Во время просмотра невозможно повредить голову ребёнка за счёт тщательно проработанной конструкции очков.</p>
-                </div>
-
-                <div class="slider__controls">
-                  <p class="slider__counter"><span>04/</span>04</p>
-                  <div class="slider__button-container">
-                    <button class="slider__button slider__button--prev" type="button" aria-label="Назад"></button>
-                    <button class="slider__button slider__button--next" type="button" aria-label="Вперед"></button>
-                  </div>
+              <div class="technology__slider-picture slider-picture">
+                <img class="slider-picture__image slider-picture__image--technology" src="img/content/vr-glasses-mobile@1x.png" width="296" height="152" alt="Удобное крепление">
+              </div>
+              <div class="technology__slider-text slider-text slider-text--technology">
+                <h3 class="slider-text__title section-subtitle">Система крепления</h3>
+                <p class="slider-text__description">Подходит под любой размер головы, даже для первоклассника. Во время просмотра невозможно повредить голову ребёнка за счёт тщательно проработанной конструкции очков.</p>
+              </div>
+              <div class="technology__slider-controls slider-controls">
+                <p class="slider-controls__counter"><span>04/</span>04</p>
+                <div class="slider-controls__button-container">
+                  <button class="slider-controls__button slider-controls__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="slider-controls__button slider-controls__button--next" type="button" aria-label="Вперед"></button>
                 </div>
               </div>
             </div>
