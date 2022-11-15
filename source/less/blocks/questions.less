@@ -43,7 +43,6 @@
   font-weight: 500;
   opacity: 0.8;
 
-
   &::after {
     position: absolute;
     content: "";
@@ -56,6 +55,7 @@
     background-size: 16px 16px;
     background-position: calc(50% + 2px) calc(50% - 2px);
     background-repeat: no-repeat;
+    cursor: pointer;
 
     @media (min-width: @desktop-width) {
       width: 72px;
@@ -64,6 +64,7 @@
   }
 
   &::before {
+    display: none;
     position: absolute;
     content: "";
     width: 7px;
@@ -72,6 +73,10 @@
     top: calc(50% - 3px);
     background-color: @green-base;
     border-radius: 50%;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -81,6 +86,14 @@
     font-size: 21px;
     line-height: 28px;
   }
+}
+
+.questions__problem:hover.questions__problem::after {
+  background-color: @green-dark;
+}
+
+.questions__problem:active.questions__problem::after {
+  background-color: @green-base;
 }
 
 .questions__answer {

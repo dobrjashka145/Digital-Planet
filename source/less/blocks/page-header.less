@@ -30,6 +30,11 @@
   align-items: center;
   grid-column: ~"1 / 2";
   grid-row: ~"1 / 2";
+  cursor: pointer;
+}
+
+.page-header__logo-image {
+  fill: @white;
 }
 
 .page-header__logo-text {
@@ -44,6 +49,23 @@
   }
 }
 
+.page-header__logo:hover .page-header__logo-image {
+  fill: @green-darker;
+}
+
+.page-header__logo:hover .page-header__logo-text {
+  color: @green-dark;
+}
+
+.page-header__logo:active .page-header__logo-image {
+  fill: @green-base;
+}
+
+.page-header__logo:active .page-header__logo-text {
+  color: @green-base;
+}
+
+
 .page-header__booking {
   grid-column: ~"2 / 3";
   grid-row: ~"1 / 2";
@@ -56,12 +78,37 @@
 }
 
 .page-header__nav-toggle {
+  position: relative;
   grid-column: ~"3 / -1";
   grid-row: ~"1 / 2";
   justify-self: end;
   align-self: center;
   width: 24px;
-  height: 24px;
+  height: 12px;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid @grey-e0;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 2px;
+    top: 3px;
+    left: 0;
+    background-color: @grey-e0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: @grey-e0;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -75,9 +122,9 @@
   margin-right: -20px;
   border-bottom: 1px solid fade(@white, 24%);
 
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
+  // @media (max-width: @mobile-width-only) {
+  //   display: none;
+  // }
 
   @media (min-width: @desktop-width) {
     grid-column: ~"2 / 3";
@@ -97,9 +144,9 @@
   padding-bottom: 28px;
   padding-left: 4px;
 
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
+  // @media (max-width: @mobile-width-only) {
+  //   display: none;
+  // }
 
   @media (min-width: @desktop-width) {
     grid-column: ~"4 / 5";
@@ -120,6 +167,14 @@
   color: @font-color-base;
   text-decoration: none;
 
+  &:hover {
+    color: @green-dark;
+  }
+
+  &:active {
+    color: @green-base;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     padding-top: 0;
@@ -128,6 +183,9 @@
 }
 
 .page-header__social {
+  display: flex;
+  flex-wrap: wrap;
+
   @media (min-width: @desktop-width) {
     display: none;
   }

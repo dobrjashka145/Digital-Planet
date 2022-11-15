@@ -1,3 +1,43 @@
 .social__link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
   color: @white;
+  vertical-align: middle;
+}
+
+.social__link--footer {
+  width: 24px;
+  height: 24px;
+  outline: 1px solid #ffdd00;
+}
+
+.social__link-image {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  fill: @white;
+  opacity: 0.64;
+  // outline: 1px solid #ff0000;
+
+  &--facebook {
+    left: -1px;
+    top: calc(50% - 22px / 2 + 1px);
+  }
+
+  &--vkontakte {
+    left: -1px;
+    top: calc(50% - 15px / 2 + 1px);
+  }
+}
+
+
+.social__link:hover .social__link-image {
+  fill: @green-darker;
+  opacity: 0.8;
+}
+
+.social__link:active .social__link-image {
+  fill: @white;
+  opacity: 1;
 }
