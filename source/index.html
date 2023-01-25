@@ -23,7 +23,7 @@
               <div class="page-header__logo-text">Digital Planet</div>
             </a>
 
-            <nav class="page-header__nav main-nav">
+            <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
               <ul class="main-nav__list">
                 <li class="main-nav__item main-nav__item--primary">
                   <a class="main-nav__link">Главная</a>
@@ -47,17 +47,17 @@
             </nav>
 
             <button class="page-header__booking button-base" type="button">Заказать</button>
-            <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
+            <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button" aria-label="Открыть меню"></button>
 
-            <div class="page-header__contacts">
+            <div class="page-header__contacts page-header__contacts--closed page-header__contacts--nojs">
               <a class="page-header__phone" href="tel:8(800)5553575">8(800) 555 35 75</a>
               <div class="page-header__social social">
-                <a class="social__link" href="#">
+                <a class="page-header__social-link social__link" href="#">
                   <svg class="social__link-image social__link-image--facebook" width="11" height="22" aria-label="Мы в Фейсбуке">
                     <use xlink:href="img/sprite.svg#fb-icon"></use>
                   </svg>
                 </a>
-                <a class="social__link" href="#">
+                <a class="page-header__social-link social__link" href="#">
                   <svg class="social__link-image social__link-image--vkontakte" width="28" height="15" aria-label="Мы Вконтакте">
                     <use xlink:href="img/sprite.svg#vk-icon"></use>
                   </svg>
@@ -463,6 +463,6 @@
       </div>
     </main>
 
-
+    <script src="js/nav-toggle.js"></script>
   </body>
 </html>

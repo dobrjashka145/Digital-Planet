@@ -31,6 +31,7 @@
   grid-column: ~"1 / 2";
   grid-row: ~"1 / 2";
   cursor: pointer;
+  z-index: 2;
 }
 
 .page-header__logo-image {
@@ -70,6 +71,7 @@
   grid-column: ~"2 / 3";
   grid-row: ~"1 / 2";
   justify-self: center;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
     grid-column: ~"3 / 4";
@@ -89,8 +91,9 @@
   border: none;
   border-top: 2px solid @grey-e0;
   cursor: pointer;
+  z-index: 2;
 
-  &::before {
+  &--closed::before {
     position: absolute;
     content: "";
     width: 24px;
@@ -100,7 +103,7 @@
     background-color: @grey-e0;
   }
 
-  &::after {
+  &--closed::after {
     position: absolute;
     content: "";
     width: 16px;
@@ -108,6 +111,37 @@
     bottom: 0;
     right: 0;
     background-color: @grey-e0;
+  }
+
+  &--opened {
+    height: 18px;
+    border-top: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 2px;
+      width: 25px;
+      height: 2px;
+      background-color: @grey-e0;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    .page-header__nav-toggle--nojs {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -120,11 +154,6 @@
   grid-row: ~"2 / 3";
   margin-left: -20px;
   margin-right: -20px;
-  border-bottom: 1px solid fade(@white, 24%);
-
-  // @media (max-width: @mobile-width-only) {
-  //   display: none;
-  // }
 
   @media (min-width: @desktop-width) {
     grid-column: ~"2 / 3";
@@ -140,13 +169,48 @@
 .page-header__contacts {
   grid-column: ~"1 / -1";
   grid-row: ~"3 / 4";
-  padding-top: 20px;
-  padding-bottom: 28px;
   padding-left: 4px;
 
-  // @media (max-width: @mobile-width-only) {
-  //   display: none;
-  // }
+  @media (max-width: @mobile-width-only) {
+    &--closed .page-header__phone,
+    &--closed .page-header__social {
+      display: none;
+    }
+
+    &--opened .page-header__phone {
+      position: absolute;
+      width: 100%;
+      top: 400px;
+      left: 0;
+      padding-left: 20px;
+      z-index: 3;
+      background-color: @grey-1c;
+    }
+
+    &--opened .page-header__social {
+      position: absolute;
+      width: 100%;
+      top: 450px;
+      left: 0;
+      padding-left: 20px;
+      z-index: 3;
+      background-color: @grey-1c;
+    }
+
+    &--nojs .page-header__phone,
+    &--nojs .page-header__social {
+      position: static;
+      display: block;
+    }
+
+    &--nojs .page-header__phone {
+      padding-top: 20px;
+    }
+
+    &--nojs .page-header__social {
+      padding-bottom: 28px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     grid-column: ~"4 / 5";
