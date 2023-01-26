@@ -10,6 +10,8 @@
 .main-nav__list {
   .list-reset();
   padding-bottom: 30px;
+  padding-left: 24px;
+  padding-right: 24px;
   border-bottom: 1px solid fade(@white, 24%);
 
   @media (min-width: @desktop-width) {
@@ -20,7 +22,8 @@
 }
 
 .main-nav__item {
-  padding: 8px 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   &--primary {
     @media (min-width: @desktop-width) {
@@ -64,33 +67,39 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--closed .main-nav__list {
+  .main-nav--closed .main-nav__list,
+  .main-nav-inner--closed .main-nav__list {
     display: none;
     border-bottom: none;
   }
 
-  .main-nav--opened .main-nav__list {
+  .main-nav--opened .main-nav__list,
+  .main-nav-inner--opened .main-nav__list {
     position: absolute;
     width: 100%;
     top: 100px;
     left: 0;
+    padding-left: 4px;
     z-index: 2;
     background-color: @grey-1c;
     border-bottom: 1px solid fade(@white, 24%);
   }
 
-  .main-nav--opened::after {
+  .main-nav--opened::after,
+  .main-nav-inner--opened::after {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% + 40px);
     height: 568px;
+    margin-left: -20px;
     background-color: @grey-1c;
     z-index: 1;
   }
 
-  .main-nav--nojs .main-nav__list {
+  .main-nav--nojs .main-nav__list,
+  .main-nav-inner--nojs .main-nav__list {
     position: static;
     display: block;
     padding-top: 20px;
