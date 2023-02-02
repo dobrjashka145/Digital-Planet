@@ -20,8 +20,6 @@
 }
 
 .page-header--intro {
-  margin-left: -16px;
-  margin-right: -16px;
   margin-top: -68px;
 
   @media (min-width: @desktop-width) {
@@ -244,6 +242,12 @@
       left: 0;
       z-index: 3;
       background-color: @grey-1c;
+    }
+
+    &-inner--opened .page-header__phone,
+    &-inner--opened .page-header__social {
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     &--nojs .page-header__phone,

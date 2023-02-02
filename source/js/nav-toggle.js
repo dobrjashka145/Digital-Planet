@@ -6,6 +6,8 @@ const navSiteInner = document.querySelector('.main-nav-inner');
 const contactsHeaderInner = document.querySelector('.page-header__contacts-inner');
 const navToggleInner = document.querySelector('.page-header__nav-toggle-inner');
 
+const navButtons = document.querySelectorAll('.main-nav__item');
+
 navSite.classList.remove('main-nav--nojs');
 contactsHeader.classList.remove('page-header__contacts--nojs');
 navToggle.classList.remove('page-header__nav-toggle--nojs');
@@ -48,4 +50,22 @@ navToggleInner.addEventListener('click', function () {
     navToggleInner.classList.add('page-header__nav-toggle-inner--closed');
     navToggleInner.classList.remove('page-header__nav-toggle-inner--opened');
   }
+});
+
+navButtons.forEach((button) => {
+  button.addEventListener('click', function() {
+    navSite.classList.add('main-nav--closed');
+    navSite.classList.remove('main-nav--opened');
+    contactsHeader.classList.add('page-header__contacts--closed');
+    contactsHeader.classList.remove('page-header__contacts--opened');
+    navToggle.classList.add('page-header__nav-toggle--closed');
+    navToggle.classList.remove('page-header__nav-toggle--opened');
+
+    navSiteInner.classList.add('main-nav-inner--closed');
+    navSiteInner.classList.remove('main-nav-inner--opened');
+    contactsHeaderInner.classList.add('page-header__contacts-inner--closed');
+    contactsHeaderInner.classList.remove('page-header__contacts-inner--opened');
+    navToggleInner.classList.add('page-header__nav-toggle-inner--closed');
+    navToggleInner.classList.remove('page-header__nav-toggle-inner--opened');
+  });
 });
