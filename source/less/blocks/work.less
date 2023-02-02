@@ -1,11 +1,15 @@
 .work__content-container {
   counter-reset: step;
+  padding-top: 58px;
+  flex: 1 0 auto;
+
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: max-content 58px max-content;
     grid-template-rows: min-content 48px max-content 60px max-content;
     justify-items: left;
+    padding-top: 78px;
   }
 }
 

@@ -1,9 +1,9 @@
 const navSite = document.querySelector('.main-nav');
-const contactsHeader = document.querySelector('.page-header__contacts')
+const contactsHeader = document.querySelector('.page-header__contacts');
 const navToggle = document.querySelector('.page-header__nav-toggle');
 
 const navSiteInner = document.querySelector('.main-nav-inner');
-const contactsHeaderInner = document.querySelector('.page-header__contacts-inner')
+const contactsHeaderInner = document.querySelector('.page-header__contacts-inner');
 const navToggleInner = document.querySelector('.page-header__nav-toggle-inner');
 
 navSite.classList.remove('main-nav--nojs');
