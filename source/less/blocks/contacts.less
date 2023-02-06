@@ -1,11 +1,11 @@
+.contacts__content-container {
+  padding-top: 58px;
+  flex: 1 0 auto;
+}
+
 .contacts__title {
   margin: 0;
   margin-bottom: 48px;
-  padding-top: 58px;
-
-  @media (min-width: @desktop-width) {
-    padding-top: 78px;
-  }
 }
 
 .contacts__list {
@@ -26,7 +26,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .contacts {
+  .contacts__content-container {
     display: grid;
     grid-template-columns: 30px 240px 60px 570px;
     grid-template-rows: min-content 50px max-content;

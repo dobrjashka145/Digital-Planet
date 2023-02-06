@@ -1,44 +1,5 @@
 .page-header {
-  position: relative;
-  display: grid;
-  grid-template-columns: 50px 1fr 57px;
-  grid-template-rows: auto 1fr auto;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 4px;
-  padding-right: 4px;
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 193px 1fr 128px 128px;
-    grid-template-rows: auto;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.page-header--intro {
-  margin-top: -68px;
-
-  @media (min-width: @desktop-width) {
-    margin-left: -56px;
-    margin-right: -44px;
-    margin-top: -76px;
-  }
-}
-
-.page-header--hover {
-  display: none;
-}
-
-.page-header--hover.page-header--fixed {
-  display: grid;
-}
-
-.page-header--fixed {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -46,7 +7,11 @@
   margin-left: calc(50% - @mobile-width / 2);
   padding-left: calc(@padding-mobile + 4px);
   padding-right: calc(@padding-mobile + 4px);
-  background-color: @violet;
+  display: grid;
+  grid-template-columns: 50px 1fr 57px;
+  grid-template-rows: auto 1fr auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
   box-sizing: border-box;
   z-index: 10;
 
@@ -56,7 +21,18 @@
     margin-left: calc(50% - @desktop-width / 2);
     padding-left: @padding-desktop;
     padding-right: @padding-desktop;
+    grid-template-columns: 193px 1fr 128px 128px;
+    grid-template-rows: auto;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
+}
+
+.page-header--fixed {
+  display: grid;
+  position: fixed;
+  background-color: @violet;
 }
 
 .page-header__logo {
@@ -130,8 +106,7 @@
   cursor: pointer;
   z-index: 2;
 
-  &--closed::before,
-  &-inner--closed::before {
+  &--closed::before {
     position: absolute;
     content: "";
     width: 24px;
@@ -141,8 +116,7 @@
     background-color: @grey-e0;
   }
 
-  &--closed::after,
-  &-inner--closed::after {
+  &--closed::after {
     position: absolute;
     content: "";
     width: 16px;
@@ -152,16 +126,13 @@
     background-color: @grey-e0;
   }
 
-  &--opened,
-  &-inner--opened {
+  &--opened {
     height: 18px;
     border-top: none;
   }
 
   &--opened::before,
-  &-inner--opened::before,
-  &--opened::after,
-  &-inner--opened::after {
+  &--opened::after {
     content: "";
     position: absolute;
     top: 7px;
@@ -171,20 +142,17 @@
     background-color: @grey-e0;
   }
 
-  &--opened::before,
-  &-inner--opened::before {
+  &--opened::before {
     transform: rotate(45deg);
     box-shadow: none;
   }
 
-  &--opened::after,
-  &-inner--opened::after {
+  &--opened::after {
     transform: rotate(-45deg);
   }
 
   @media (max-width: @mobile-width-only) {
-    .page-header__nav-toggle--nojs,
-    .page-header__nav-toggle-inner--nojs {
+    .page-header__nav-toggle--nojs {
       display: none;
     }
   }
@@ -218,53 +186,43 @@
 
   @media (max-width: @mobile-width-only) {
     &--closed .page-header__phone,
-    &--closed .page-header__social,
-    &-inner--closed .page-header__phone,
-    &-inner--closed .page-header__social {
+    &--closed .page-header__social {
       display: none;
     }
 
-    &--opened .page-header__phone,
-    &-inner--opened .page-header__phone {
+    &--opened .page-header__phone {
       position: absolute;
       width: 100%;
       top: 400px;
       left: 0;
+      padding-left: calc(@padding-mobile + 4px);
+      padding-right: calc(@padding-mobile + 4px);
       z-index: 3;
       background-color: @grey-1c;
     }
 
-    &--opened .page-header__social,
-    &-inner--opened .page-header__social {
+    &--opened .page-header__social {
       position: absolute;
       width: 100%;
       top: 450px;
       left: 0;
+      padding-left: calc(@padding-mobile + 4px);
+      padding-right: calc(@padding-mobile + 4px);
       z-index: 3;
       background-color: @grey-1c;
     }
 
-    &-inner--opened .page-header__phone,
-    &-inner--opened .page-header__social {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-
     &--nojs .page-header__phone,
-    &--nojs .page-header__social,
-    &-inner--nojs .page-header__phone,
-    &-inner--nojs .page-header__social {
+    &--nojs .page-header__social {
       position: static;
       display: block;
     }
 
-    &--nojs .page-header__phone,
-    &-inner--nojs .page-header__phone {
+    &--nojs .page-header__phone {
       padding-top: 20px;
     }
 
-    &--nojs .page-header__social,
-    &-inner--nojs .page-header__phone {
+    &--nojs .page-header__social {
       padding-bottom: 28px;
     }
   }
