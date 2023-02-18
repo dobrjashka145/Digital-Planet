@@ -1,13 +1,18 @@
-let navLink = document.querySelectorAll('.main-nav__item');
+const navLinks = document.querySelectorAll('.main-nav__item');
+const navLogo = document.querySelector('.page-header__logo');
 
-for (var i = 0; i < navLink.length; i++) {
-  navLink[i].addEventListener("click", function() {
+navLogo.addEventListener('click', activeNone);
 
-    var current = document.querySelectorAll('.main-nav__item--active');
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(' main-nav__item--active', '');
-    }
-
-    this.className += ' main-nav__item--active';
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function() {
+    activeNone();
+    this.classList.add('main-nav__item--active');
   });
+}
+
+function activeNone () {
+  let current = document.querySelectorAll('.main-nav__item--active');
+  if (current.length > 0) {
+    current[0].classList.remove('main-nav__item--active');
+  }
 }
