@@ -2,7 +2,6 @@ const navSite = document.querySelector('.main-nav');
 const contactsHeader = document.querySelector('.page-header__contacts');
 const navToggle = document.querySelector('.page-header__nav-toggle');
 
-const navLogo = document.querySelector('.page-header__logo')
 const navButtons = document.querySelectorAll('.main-nav__item');
 
 navSite.classList.remove('main-nav--nojs');
@@ -13,10 +12,8 @@ navToggle.addEventListener('click', function () {
   navSite.classList.contains('main-nav--closed') ? navOpen() : navClose();
 });
 
-navLogo.addEventListener('click', function () {
-  if (navSite.classList.contains('main-nav--opened')) {
-    navClose();
-  };
+document.querySelector('.page-header__logo').addEventListener('click', function () {
+  if (navSite.classList.contains('main-nav--opened')) navClose();
 });
 
 for (let button of navButtons) {

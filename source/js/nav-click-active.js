@@ -1,9 +1,7 @@
-const navLinks = document.querySelectorAll('.main-nav__item');
-const navLogo = document.querySelector('.page-header__logo');
+document.querySelector('.page-header__logo').addEventListener('click', activeNone);
 
-navLogo.addEventListener('click', activeNone);
-
-for (var i = 0; i < navLinks.length; i++) {
+for (let i = 0; i < navLinks.length; i++) {
+  const navLinks = document.querySelectorAll('.main-nav__item');
   navLinks[i].addEventListener('click', function() {
     activeNone();
     this.classList.add('main-nav__item--active');
