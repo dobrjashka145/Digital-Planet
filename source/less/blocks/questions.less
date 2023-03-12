@@ -27,7 +27,6 @@
 }
 
 .questions__item {
-  padding-bottom: 10px;
   line-height: 22px;
   color: @grey-1c;
   background-color: @white;
@@ -42,8 +41,65 @@
   margin-bottom: 5px;
 }
 
-.questions__problem {
+.questions-wrapper {
   position: relative;
+}
+
+.questions__toggle {   // Зеленый квадрат с переключателем справа
+  position: absolute;
+  width: 32px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: @green-darker;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    width: 67px;
+  }
+
+  &::before,
+  &::after,
+  &--closed::before,
+  &--closed::after {
+    position: absolute;
+    content: "";
+    background-color: @white;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+  }
+
+  &--closed::before {
+    width: 16px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--closed::after {
+    width: 2px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--opened::before {
+    width: 16px;
+    height: 2px;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &--opened::after {
+    width: 2px;
+    height: 16px;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.questions__problem {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 8px;
@@ -52,26 +108,7 @@
   font-weight: 500;
   opacity: 0.8;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background-color: @green-darker;
-    background-image: url("../../img/icons/plus.svg");
-    background-size: 16px 16px;
-    background-position: calc(50% + 2px) calc(50% - 2px);
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-    @media (min-width: @desktop-width) {
-      width: 72px;
-      background-size: 22px 22px;
-    }
-  }
-
+  // Круглые зеленые маркеры слева - для десктопа
   &::before {
     display: none;
     position: absolute;
@@ -88,7 +125,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 134px;
@@ -111,5 +148,14 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 280px;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--nojs,
+  &--opened {
+    display: block;
   }
 }

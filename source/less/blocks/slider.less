@@ -26,14 +26,15 @@
   }
 }
 
-// .slider-wrapper--nojs {
-//   display: flex;
-//   flex-wrap: nowrap;
+.slider--nojs > .slider-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 
-//   &.slider-item {
-//     z-index: 1;
-//   }
-// }
+  & > .slider__item {
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+}
 
 .slider-wrapper {
   display: grid;

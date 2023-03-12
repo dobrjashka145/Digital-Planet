@@ -1,11 +1,15 @@
-const sliders = document.querySelectorAll('.slider');
+const Sliders = document.querySelectorAll('.slider');
 
-for (let i = 0; i < sliders.length; i++) {
-  moveSlide (sliders[i]);
+for (let slider of Sliders) {
+  slider.classList.remove('slider--nojs');
+}
+
+for (let i = 0; i < Sliders.length; i++) {
+  moveSlide (Sliders[i]);
 }
 
 function moveSlide (slider) {
-  const sliderItems = Array.from(slider.querySelectorAll('.slider__item'));
+  const sliderItems = slider.querySelectorAll('.slider__item');
   const buttonNext = slider.querySelector('.slider-controls__button--next');
   const buttonPrev = slider.querySelector('.slider-controls__button--prev');
   const counterTotal = slider.querySelector('.slider-controls__counter-total');
@@ -16,7 +20,7 @@ function moveSlide (slider) {
   let i = 0;
   buttonNext.addEventListener('click', function() {
     sliderItems[i].classList.remove('slider__item--active');
-    i = (i + 1) % sliderItems.length;
+    i = (i + 1) % sliderItems.length; // Обнуление i при i=sliderItems.length, т.к. остаток от деления =0
     sliderItems[i].classList.add('slider__item--active');
     counterCurrent.textContent = '0' + (i + 1) + '/';
   });
