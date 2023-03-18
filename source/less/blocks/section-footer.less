@@ -1,7 +1,6 @@
 .section-footer {
   flex-shrink: 0;
 
-
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 140px auto;
@@ -15,12 +14,17 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    left: -54px;
+  }
 }
 
 .section-footer__scrolldown {
   position: relative;
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 14px;
   font-weight: 400;
   font-size: 11px;
   line-height: 15px;
@@ -51,7 +55,17 @@
 
   @media (min-width: @desktop-width) {
     grid-column: ~"2 / 3";
-    margin-left: -70px;
+    margin-left: -104px;
+
+    &::after {
+      background-size: 9px 20px;
+      left: calc(50% - 60px);
+    }
+
+    &--inner::after {
+      left: calc(50% - 44px);
+      top: calc(20% - 4px);
+    }
   }
 }
 
@@ -60,5 +74,10 @@
 
   &--intro {
     display: block;
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      left: -47px;
+    }
   }
 }

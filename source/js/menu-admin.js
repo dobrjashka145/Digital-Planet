@@ -10,6 +10,7 @@ const navLogo = document.querySelector('.page-header__logo');
 navSite.classList.remove('main-nav--nojs');
 contactsHeader.classList.remove('page-header__contacts--nojs');
 navToggle.classList.remove('page-header__nav-toggle--nojs');
+navbar.classList.remove('page-header--nojs');
 
 // Открываем/закрываем мобильное меню по клику на переключатель-"гамбургер"
 navToggle.addEventListener('click', function () {

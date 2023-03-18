@@ -22,7 +22,7 @@ function moveSlide (slider) {
     sliderItems[i].classList.remove('slider__item--active');
     i = (i + 1) % sliderItems.length; // Обнуление i при i=sliderItems.length, т.к. остаток от деления =0
     sliderItems[i].classList.add('slider__item--active');
-    counterCurrent.textContent = '0' + (i + 1) + '/';
+    counterCurrent.textContent = '0' + (i + 1) + ' /';
   });
 
   buttonPrev.addEventListener('click', function() {
@@ -33,7 +33,7 @@ function moveSlide (slider) {
       i = (i - 1);
     }
     sliderItems[i].classList.add('slider__item--active');
-    counterCurrent.textContent = '0' + (i + 1) + '/';
+    counterCurrent.textContent = '0' + (i + 1) + ' /';
   });
 }
 

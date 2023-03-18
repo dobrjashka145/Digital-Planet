@@ -11,7 +11,9 @@ for (let i = 0; i < questionToggles.length; i++) {
 
 function toggleAnswer (toggleCurrent, answerCurrent) {
   toggleCurrent.addEventListener('click', function () {
-    toggleCurrent.classList.contains('questions__toggle--closed') ? answerOpen(toggleCurrent, answerCurrent) : answerClose(toggleCurrent, answerCurrent);
+    toggleCurrent.classList.contains('questions__toggle--closed') ?
+      answerOpen(toggleCurrent, answerCurrent) :
+      answerClose(toggleCurrent, answerCurrent);
   });
 }
 

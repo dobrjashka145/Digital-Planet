@@ -1,13 +1,14 @@
 .page-footer {
-  margin-top: 80px;
+  margin-top: 78px;
   margin-bottom: 47px;
-  margin-left: -4px;
-  padding-right: 8px;
   flex-shrink: 0;
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 17px;
+    padding-right: 8px;
   }
 }
 
@@ -17,6 +18,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-grow: 2;
+    align-items: end;
+    margin-bottom: 5px;
   }
 }
 
@@ -26,6 +29,10 @@
   font-size: @font-size-text-smaller;
   line-height: 17px;
   opacity: 0.64;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 
   &--second {
     @media (min-width: @desktop-width) {
@@ -37,4 +44,8 @@
 .page-footer__social {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 95px;
+  }
 }
