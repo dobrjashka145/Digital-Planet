@@ -39,6 +39,10 @@
   color: @grey-1c;
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 865px;
     padding-left: 39px;
@@ -84,13 +88,12 @@
     padding-top: 18px;
     padding-bottom: 24px;
     padding-left: 0;
-    // padding-right: 134px;
     font-size: 21px;
     line-height: 28px;
   }
 }
 
-.questions__toggle {   // Зеленый квадрат с переключателем справа
+.questions__toggle {   // Зеленый квадрат с крестиком справа
   position: relative;
   width: 32px;
   background-color: @green-darker;

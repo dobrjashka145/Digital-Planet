@@ -1,5 +1,5 @@
 .contacts {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -12,7 +12,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 75px;
     padding-left: 31px;
-    // padding-right: 26px;
+    padding-right: 26px;
   }
 }
 
@@ -24,6 +24,12 @@
 .contacts__list {
   margin: 0;
   margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__item {

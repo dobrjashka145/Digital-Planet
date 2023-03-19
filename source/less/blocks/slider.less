@@ -7,7 +7,8 @@
 
     @media (min-width: @tablet-width) {
       font-size: @font-size-h3-desktop;
-      margin-top: 50px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     @media (min-width: @desktop-width) {
@@ -386,6 +387,14 @@
 
   @media (min-width: @tablet-width) {
     &--product img {
+      min-width: 345px;
+      min-height: 230px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--product img {
       min-width: 562px;
       min-height: 300px;
       margin-left: auto;
@@ -529,7 +538,12 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    margin-bottom: 0;
+    margin-right: calc(345px - 179px); //разница ширин img и controls
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
 
@@ -553,7 +567,6 @@
     }
   }
 }
-
 
 .slider-controls__counter {
   margin: 0;
