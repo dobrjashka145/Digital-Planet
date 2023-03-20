@@ -4,26 +4,35 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 30px;
-    padding-left: 56px;
+    padding-left: 0;
   }
 }
 
 .intro__content-container {
   flex: 1 0 auto;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 56px;
+  }
 }
 
 .intro__title {
   margin: 0;
-  margin-bottom: 20px;
-  padding-top: 90px;
+  margin-bottom: 19px;
+  padding-top: 78px;
   font-size: @font-size-h1-mobile;
   font-weight: 400;
   line-height: 41px;
   text-align: center;
 
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 24px;
-    padding-top: 153px;
+    padding-top: 158px;
     font-size: @font-size-h1-desktop;
     line-height: 110px;
     text-align: left;
@@ -32,12 +41,15 @@
 
 .intro__text {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
+  padding-left: 31px;
+  padding-right: 31px;
   line-height: 21px;
   text-align: center;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 71px;
+    padding-left: 0;
     font-size: @font-size-text-larger;
     line-height: 26px;
     text-align: left;
@@ -49,13 +61,15 @@
   margin-bottom: 12px;
   background-image: url("../../img/icons/order-icon.svg");
   background-size: 25px 25px;
-  background-position: calc(50% - 53px) 50%;
+  background-position: calc(50% - 57px) 50%;
   background-repeat: no-repeat;
 
   @media (min-width: @desktop-width) {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 24px;
+    margin-right: 22px;
+    background-size: 30px 30px;
+    background-position: 37px 50%;
   }
 }
 
@@ -63,18 +77,14 @@
   margin: 0 auto;
   background-image: url("../../img/icons/video-icon.svg");
   background-size: 25px 25px;
-  background-position: calc(50% - 39px) 50%;
+  background-position: calc(50% - 43px) 50%;
   background-repeat: no-repeat;
 
   @media (min-width: @desktop-width) {
+    min-width: 200px;
+    padding-left: 76px;
     display: inline-block;
-  }
-}
-
-.intro__footer {
-  // margin-bottom: 57px;
-
-  @media (min-width: @desktop-width) {
-    // margin-top: 154px;
+    background-size: 30px 30px;
+    background-position: 35px 50%;
   }
 }

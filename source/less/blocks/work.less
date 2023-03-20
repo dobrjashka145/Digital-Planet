@@ -1,107 +1,18 @@
 .work__content-container {
   counter-reset: step;
-  padding-top: 58px;
+  padding-top: 60px;
   flex: 1 0 auto;
 
-
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: max-content 58px max-content;
-    grid-template-rows: min-content 48px max-content 60px max-content;
-    justify-items: left;
-    padding-top: 58px;
+    padding-top: 75px;
   }
 }
 
 .work__title {
   margin: 0;
-  margin-bottom: 48px;
-}
+  margin-bottom: 56px;
 
-@media (min-width: @desktop-width) {
-  .work__slider-controls {
-    display: none;
-  }
-
-  .work__title {
-    grid-column: ~"1 / 5";
-    grid-row: ~"1 / 2";
-    margin-bottom: 0;
-  }
-
-  .work__slider-item {
-    position: relative;
-    display: flex;
-    margin-bottom: 0;
-    box-sizing: border-box;
-  }
-
-  .work__slider-item:nth-of-type(1) {
-    grid-column: ~"1 / 2";
-    grid-row: ~"3 / 4";
-    margin-left: 22px;
-  }
-
-  .work__slider-item:nth-of-type(2) {
-    grid-column: ~"3 / 4";
-    grid-row: ~"3 / 4";
-    margin-top: 17px;
-
-    &::after {
-      position: absolute;
-      width: 50%;
-      height: 47px;
-      content: "";
-      top: 5%;
-      left: -52%;
-      background-image: url("../../img/strip.svg");
-      background-position: 0 0;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .work__slider-item:nth-of-type(3) {
-    grid-column: ~"1 / 2";
-    grid-row: ~"5 / 6";
-    margin-left: 52px;
-
-    &::after {
-      position: absolute;
-      width: 94%;
-      height: 83px;
-      content: "";
-      top: -50%;
-      left: 15%;
-      background-image: url("../../img/strip-long.svg");
-      background-position: 0 0;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .work__slider-item:nth-of-type(4) {
-    grid-column: ~"3 / 4";
-    grid-row: ~"5 / 6";
-    margin-top: 17px;
-    margin-left: 30px;
-
-    &::after {
-      position: absolute;
-      width: 50%;
-      height: 47px;
-      content: "";
-      top: 11%;
-      left: -52%;
-      background-image: url("../../img/strip.svg");
-      background-position: 0 0;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .work__slider-text {
-    width: 300px;
-    margin-left: 32px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
   }
 }

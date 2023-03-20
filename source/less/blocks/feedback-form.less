@@ -2,8 +2,28 @@
   padding-right: 8px;
 }
 
+.feedback__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.feedback__text {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-right: 40px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
 .feedback-form__fieldset {
   border: none;
+  padding: 0;
 }
 
 .feedback-form__field {
@@ -23,11 +43,19 @@
   border: none;
   box-sizing: border-box;
 
+  @media (min-width: @desktop-width) {
+    padding-top: 14px;
+    padding-bottom: 16px;
+  }
+
   &--textarea {
     min-height: 165px;
+    margin-bottom: 0;
 
     @media (min-width: @desktop-width) {
       min-height: 144px;
+      padding-top: 13px;
+      padding-bottom: 17px;
     }
   }
 
@@ -36,45 +64,22 @@
   }
 }
 
-.feedback-form__image {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-
-.feedback-form__image--correct {
-  right: 18px;
-}
-
-.feedback-form__image--incorrect {
-  right: 16px;
-}
-
 .feedback-form__input[name="name"],
 .feedback-form__input[name="email"] {
   &:invalid {
     outline: 2px solid @red;
-  }
-
-  &:invalid ~ .feedback-form__image--correct {
-    z-index: -1;
-  }
-
-  &:invalid ~ .feedback-form__image--incorrect {
-    z-index: 1;
+    background-image: url("../../img/incorrect.svg");
+    background-size: 12px 12px;
+    background-position: center right 16px;
+    background-repeat: no-repeat;
   }
 
   &:valid {
     outline: 2px solid @green-grass;
-  }
-
-  &:valid ~ .feedback-form__image--incorrect {
-    z-index: -1;
-  }
-
-  &:valid ~ .feedback-form__image--correct {
-    z-index: 1;
+    background-image: url("../../img/correct.svg");
+    background-size: 12px 9px;
+    background-position: center right 18px;
+    background-repeat: no-repeat;
   }
 
   &:focus {
@@ -89,14 +94,12 @@
 }
 
 .feedback-form__submit {
-  margin-top: 20px;
+  margin-top: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 @media (min-width: @desktop-width) {
-  .feedback__title {
-    margin-top: 0;
-  }
-
   .feedback-form__fieldset {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -105,6 +108,16 @@
     margin: 0;
     padding: 0;
     border: none;
+  }
+
+  .feedback-form__fieldset label[aria-label="Имя"] {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 2";
+  }
+
+  .feedback-form__fieldset label[aria-label="Email"] {
+    grid-column: ~"2 / 3";
+    grid-row: ~"1 / 2";
   }
 
   .feedback-form__fieldset label[aria-label="Вопрос"] {
