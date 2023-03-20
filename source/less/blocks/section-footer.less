@@ -51,9 +51,18 @@
     background-repeat: no-repeat;
   }
 
+  &--inner {
+    top: -20px;
+    margin-top: 20px;
+  }
+
   @media (min-width: @tablet-width) {
-    left: -40px;
+    left: -10px;
     margin: 0 auto;
+
+    &--inner {
+      top: -15px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -62,7 +71,6 @@
 
     &::after {
       background-size: 9px 20px;
-      // left: calc(50% - 60px);
     }
   }
 }
