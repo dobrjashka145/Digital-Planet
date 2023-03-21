@@ -1,0 +1,63 @@
+.order-confirm {
+  padding-top: 216px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 140px;
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}
+
+.order-confirm__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 52px;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 4px solid fade(@grey-1c, 10%);
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 60px;
+    top: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../../img/icons/check.svg");
+    background-size: 55px 45px;
+    background-position: 15px 9px;
+    background-repeat: no-repeat;
+  }
+}
+
+.order-confirm__text {
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+@media (min-width: @desktop-width) {
+  .order-confirm__text br {
+    display: none;
+  }
+}
+
+.order-confirm__button {
+  padding: 7px 34px;
+  color: fade(@grey-1c, 40%);
+
+  &:hover,
+  &:active {
+    color: @white;
+  }
+}

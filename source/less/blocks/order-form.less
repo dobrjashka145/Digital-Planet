@@ -1,0 +1,87 @@
+.order-form {
+  .feedback-form__field {
+    position: relative;
+  }
+
+  .order-form__input {
+    width: 100%;
+    padding: 15px;
+    font-family: @font-family-base;
+    font-size: @font-size-text-smaller;
+    line-height: 17px;
+    color: fade(@grey-1c, 95%);
+    background-color: @white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: fade(@grey-1c, 40%);
+    }
+
+    &:invalid {
+      outline: 2px solid @red;
+      background-image: url("../../img/incorrect.svg");
+      background-size: 12px 12px;
+      background-position: center right 16px;
+      background-repeat: no-repeat;
+    }
+
+    &:valid {
+      outline: 2px solid @green-grass;
+      background-image: url("../../img/correct.svg");
+      background-size: 12px 9px;
+      background-position: center right 18px;
+      background-repeat: no-repeat;
+    }
+
+    &:focus {
+      border: none;
+      outline: 2px solid @green-base;
+    }
+  }
+}
+
+.order-form-wrapper-tel {
+  position: relative;
+  margin-top: 9px;
+}
+
+.order-form__pattern-tel {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 15px;
+  font-family: @font-family-base;
+  font-size: @font-size-text-smaller;
+  color: fade(@grey-1c, 40%);
+  line-height: 17px;
+  text-align: left;
+  letter-spacing: 0.05em;
+  background-color: @white;
+  border: none;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.order-form__input[name="order-tel"]:focus {
+  background-color: transparent;
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.order-form__submit {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 7px 14px;
+  color: fade(@grey-1c, 40%);
+
+  &:hover,
+  &:active {
+    color: @white;
+  }
+}

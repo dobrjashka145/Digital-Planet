@@ -47,7 +47,7 @@
               </ul>
             </nav>
 
-            <button class="page-header__booking button-base" type="button">Заказать</button>
+            <button class="page-header__booking button-base" type="button" name="order">Заказать</button>
             <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button" aria-label="Открыть меню"></button>
 
             <div class="page-header__contacts page-header__contacts--closed page-header__contacts--nojs">
@@ -75,7 +75,7 @@
 
               <p class="intro__text">Образовательный виртуальный планетарий в Новороссийске.<br>Познавательное приключение в мир звёзд и галактик.</p>
 
-              <button class="intro__booking button-base button-base--big button-base--big-fill" type="button">Заказать</button>
+              <button class="intro__booking button-base button-base--big button-base--big-fill" type="button" name="order">Заказать</button>
               <button class="intro__video button-base button-base--big" type="button">Видео</button>
             </div>
 
@@ -513,10 +513,39 @@
           </section>
         </div>
       </div>
+
+      <div id="ordercard" class="order-card-container modal-container modal-closed">
+        <div class="order-card order-box">
+          <div class="order-card__toggle order-toggle"></div>
+          <h3 class="order-card__title order-title">Закажите VR планетарий</h3>
+          <p class="order-card__text">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
+          <form class="order-card__form order-form" action="#" method="get">
+            <label class="order-form__field" aria-label="Имя заказчика">
+              <input class="order-form__input" type="text" name="order-name" placeholder="Ваше имя" required>
+            </label>
+            <label class="order-form__field" for="ordertel" aria-label="Телефон заказчика"></label>
+              <div class="order-form-wrapper-tel">
+                <span class="order-form__pattern-tel">+7 (___) ___-__-__</span>
+                <input class="order-form__input" type="tel" id="ordertel" name="order-tel" placeholder="Ваш телефон" pattern="\+7[\s]{1}\([0-9]{3}\)[\s?]{1}[0-9]{3}-[0-9]{2}-[0-9]{2}"  required>
+              </div>
+            <button class="order-form__submit button-base" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class=" order-confirm-container modal-container modal-closed">
+        <div class="order-confirm order-box">
+          <div class="order-confirm__toggle order-toggle"></div>
+          <h3 class="order-confirm__title order-title">Сообщение успешно отправлено!</h3>
+          <p class="order-confirm__text">Мы обязательно свяжемся с вами <br>в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</p>
+          <button class="order-confirm__button button-base" type="button">ОК</button>
+        </div>
+      </div>
     </main>
 
     <script src="js/menu-admin.js"></script>
     <script src="js/slider-admin.js"></script>
     <script src="js/questions-admin.js"></script>
+    <script src="js/modal-admin.js"></script>
   </body>
 </html>

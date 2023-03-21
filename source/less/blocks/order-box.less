@@ -1,0 +1,26 @@
+.order-box {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: @font-family-base;
+  font-style: @font-style-base;
+  font-size: @font-size-text-base;
+  font-weight: @font-weight-base;
+  line-height: 19px;
+  text-align: center;
+  color: fade(@grey-1c, 64%);
+  background-color: @grey-f3;
+  box-sizing: border-box;
+
+  @media (min-width: @desktop-width) {
+    width: 560px;
+    height: 338px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
