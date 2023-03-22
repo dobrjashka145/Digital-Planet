@@ -1,6 +1,6 @@
 .modal-container {
   position: fixed;
-  display: block;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,6 +9,13 @@
   z-index: 10;
 }
 
-.modal-container.modal-closed {
-  display: none;
+.modal-container.modal-opened {
+  display: block;
+}
+
+.modal-container--nojs {
+  position: static;
+  display: block;
+  height: 100vh;
+  background-color: fade(@grey-1c, 50%);
 }

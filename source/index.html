@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Digital Planet VR</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
     <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font">
     <link rel="preload" href="fonts/Ubuntu-Light.woff2" as="font">
     <link rel="preload" href="fonts/Ubuntu-Medium.woff2" as="font">
@@ -47,7 +50,7 @@
               </ul>
             </nav>
 
-            <button class="page-header__booking button-base" type="button" name="order">Заказать</button>
+            <a class="page-header__booking button-base" href="order-card-nojs.html">Заказать</a>
             <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button" aria-label="Открыть меню"></button>
 
             <div class="page-header__contacts page-header__contacts--closed page-header__contacts--nojs">
@@ -75,7 +78,7 @@
 
               <p class="intro__text">Образовательный виртуальный планетарий в Новороссийске.<br>Познавательное приключение в мир звёзд и галактик.</p>
 
-              <button class="intro__booking button-base button-base--big button-base--big-fill" type="button" name="order">Заказать</button>
+              <a class="intro__booking button-base button-base--big button-base--big-fill" href="order-card-nojs.html">Заказать</a>
               <button class="intro__video button-base button-base--big" type="button">Видео</button>
             </div>
 
@@ -514,7 +517,7 @@
         </div>
       </div>
 
-      <div id="ordercard" class="order-card-container modal-container modal-closed">
+      <div id="ordercard" class="order-card-container modal-container">
         <div class="order-card order-box">
           <div class="order-card__toggle order-toggle"></div>
           <h3 class="order-card__title order-title">Закажите VR планетарий</h3>
@@ -533,7 +536,7 @@
         </div>
       </div>
 
-      <div class=" order-confirm-container modal-container modal-closed">
+      <div class=" order-confirm-container modal-container">
         <div class="order-confirm order-box">
           <div class="order-confirm__toggle order-toggle"></div>
           <h3 class="order-confirm__title order-title">Сообщение успешно отправлено!</h3>
