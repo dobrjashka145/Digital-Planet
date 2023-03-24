@@ -36,9 +36,3 @@ function moveSlide (slider) {
     counterCurrent.textContent = '0' + (i + 1) + ' /';
   });
 }
-
-
-
-
-
-

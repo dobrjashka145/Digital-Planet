@@ -1,7 +1,6 @@
 const navSite = document.querySelector('.main-nav');
 const contactsHeader = document.querySelector('.page-header__contacts');
 const navToggle = document.querySelector('.page-header__nav-toggle');
-
 const navbar = document.querySelector('.page-header');
 const navLinks = document.querySelectorAll('.main-nav__item');
 const navLogo = document.querySelector('.page-header__logo');
@@ -51,17 +50,15 @@ navLogo.addEventListener('click', activeNone);
 
 // Выделяем активный пункт десктопного меню при прокрутке
 window.addEventListener('scroll', function() {
-	const scrollDistance = window.scrollY;
+  const scrollDistance = window.scrollY;
   const sections = document.querySelectorAll('section');
-
-		sections.forEach(function(section, i) {
-			if (section.offsetTop - navbar.clientHeight <= scrollDistance) {
-				activeNone();
-				navLinks[i].classList.add('main-nav__item--active');
-			}
-		});
-	}
-);
+  sections.forEach(function(section, i) {
+    if (section.offsetTop - navbar.clientHeight <= scrollDistance) {
+      activeNone();
+      navLinks[i].classList.add('main-nav__item--active');
+    }
+  });
+});
 
 // Функция "Открыть мобильное меню"
 function navOpen () {

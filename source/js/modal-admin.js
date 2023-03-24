@@ -44,5 +44,3 @@ orderConfirmToggle.addEventListener('click', function() {
 orderConfirmOK.addEventListener('click', function() {
   orderConfirm.classList.remove('modal-opened');
 });
-
-
