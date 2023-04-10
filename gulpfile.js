@@ -28,7 +28,6 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -66,7 +65,7 @@ const minJS = () => {
 // Images
 
 const imagesOpti = () => {
-  return gulp.src('source/img/**/*.{jpg,png,svg}')
+  return gulp.src(['source/img/**/*.{jpg,png,svg}', '!source/img/sprite.svg', '!source/img/content/logo.svg', '!source/img/icons/fb-icon.svg', '!source/img/icons/vk-icon.svg', '!source/img/icons/arrow-left.svg', '!source/img/icons/magnifier-icon.svg'])
     .pipe(imagemin([
       mozjpeg({quality: 90, progressive: true}),
       optipng({optimizationLevel: 2}),
@@ -77,7 +76,7 @@ const imagesOpti = () => {
 
 const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/**'])
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 93}))
     .pipe(gulp.dest('build/img'));
 }
 
@@ -98,6 +97,7 @@ const spriteSvg = () => {
         $('[stroke]').removeAttr('stroke');
     }
 }))
+  .pipe(imagemin([svgo()]))
   .pipe(svgstore())
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img'));
@@ -114,7 +114,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-    baseDir: 'source'
+    baseDir: 'build'
   },
     cors: true,
     notify: false,
@@ -127,8 +127,8 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  // gulp.watch('source/js/*.js', gulp.series(minJS));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(minJS));
+  gulp.watch('source/*.html', gulp.series(minHTML)).on('change', browser.reload);
 }
 
 // Build
@@ -141,8 +141,8 @@ export const build = gulp.series(
     minHTML,
     minJS,
     imagesOpti,
-    createWebp,
-    spriteSvg
+    spriteSvg,
+    createWebp
   )
 );
 
