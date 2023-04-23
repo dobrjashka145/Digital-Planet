@@ -62,6 +62,7 @@ window.addEventListener('scroll', function() {
 
 // Функция "Открыть мобильное меню"
 function navOpen () {
+  navbar.classList.add('page-header--opened');
   navSite.classList.remove('main-nav--closed');
   navSite.classList.add('main-nav--opened');
   contactsHeader.classList.remove('page-header__contacts--closed');
@@ -72,6 +73,7 @@ function navOpen () {
 
 // Функция "Закрыть мобильное меню"
 function navClose () {
+  navbar.classList.remove('page-header--opened');
   navSite.classList.add('main-nav--closed');
   navSite.classList.remove('main-nav--opened');
   contactsHeader.classList.add('page-header__contacts--closed');

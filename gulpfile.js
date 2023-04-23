@@ -76,7 +76,7 @@ const imagesOpti = () => {
 
 const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/**'])
-    .pipe(webp({quality: 93}))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest('build/img'));
 }
 
