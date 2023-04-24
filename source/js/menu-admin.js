@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Выделяем активный пункт десктопного меню при клике на него
+// Выделяем активный пункт меню при клике на него (планшет, десктоп)
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', function() {
     activeNone();
@@ -44,11 +44,11 @@ for (let i = 0; i < navLinks.length; i++) {
   });
 };
 
-/* Убираем выделение активного пункта десктопного меню
-   по клику на логотип при переходе на главную страницу */
+/* Убираем выделение активного пункта меню по клику
+ на логотип при переходе на главную страницу (планшет, десктоп)*/
 navLogo.addEventListener('click', activeNone);
 
-// Выделяем активный пункт десктопного меню при прокрутке
+// Выделяем активный пункт меню при прокрутке (планшет, десктоп)
 window.addEventListener('scroll', function() {
   const scrollDistance = window.scrollY;
   const sections = document.querySelectorAll('section');

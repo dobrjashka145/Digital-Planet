@@ -32,6 +32,18 @@
   margin-right: -8px;
   margin-bottom: 20px;
 
+  @media (max-width: @mobile-width-only) {
+    max-width: calc(@mobile-width + 125px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    max-width: calc(@tablet-width + 105px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0;
   }

@@ -26,7 +26,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    margin-top: 140px;
+    margin-top: 85px;
     margin-bottom: 40px;
     font-size: 60px;
   }
@@ -47,6 +47,13 @@
   padding-right: 31px;
   line-height: 21px;
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    max-width: @mobile-width;
+    margin: 0 auto;
+    margin-bottom: 51px;
+    box-sizing: border-box;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 71px;
