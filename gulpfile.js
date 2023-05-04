@@ -67,7 +67,7 @@ const minJS = () => {
 const imagesOpti = () => {
   return gulp.src(['source/img/**/*.{jpg,png,svg}', '!source/img/sprite.svg', '!source/img/content/logo.svg', '!source/img/icons/fb-icon.svg', '!source/img/icons/vk-icon.svg', '!source/img/icons/arrow-left.svg', '!source/img/icons/magnifier-icon.svg'])
     .pipe(imagemin([
-      mozjpeg({quality: 90, progressive: true}),
+      mozjpeg({quality: 80, progressive: true}),
       optipng({optimizationLevel: 2}),
       svgo()
     ]))
@@ -76,7 +76,7 @@ const imagesOpti = () => {
 
 const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/**'])
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 80}))
     .pipe(gulp.dest('build/img'));
 }
 
