@@ -65,7 +65,7 @@ const minJS = () => {
 // Images
 
 const imagesOpti = () => {
-  return gulp.src(['source/img/**/*.{jpg,png,svg}', '!source/img/sprite.svg', '!source/img/content/logo.svg', '!source/img/icons/fb-icon.svg', '!source/img/icons/vk-icon.svg', '!source/img/icons/arrow-left.svg', '!source/img/icons/magnifier-icon.svg'])
+  return gulp.src(['source/img/**/*.{jpg,png,svg}', '!source/img/sprite.svg', '!source/img/content/logo.svg', '!source/img/icons/fb-icon.svg', '!source/img/icons/vk-icon.svg', '!source/img/icons/arrow-left.svg'])
     .pipe(imagemin([
       mozjpeg({quality: 80, progressive: true}),
       optipng({optimizationLevel: 2}),
@@ -90,7 +90,7 @@ const copyImages = () => {
 // Sprite svg
 
 const spriteSvg = () => {
-  return gulp.src(['source/img/content/logo.svg', 'source/img/icons/fb-icon.svg', 'source/img/icons/vk-icon.svg', 'source/img/icons/arrow-left.svg', 'source/img/icons/magnifier-icon.svg'])
+  return gulp.src(['source/img/content/logo.svg', 'source/img/icons/fb-icon.svg', 'source/img/icons/vk-icon.svg', 'source/img/icons/arrow-left.svg'])
   .pipe(cheerio({
     run: ($) => {
         $('[fill]').removeAttr('fill');
