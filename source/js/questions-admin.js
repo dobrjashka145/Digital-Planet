@@ -5,6 +5,10 @@ for (let answer of questionAnswers) {
   answer.classList.remove('questions__answer--nojs');
 }
 
+for (let toggle of questionToggles) {
+  toggle.classList.remove('questions__toggle--nojs');
+}
+
 for (let i = 0; i < questionToggles.length; i++) {
   toggleAnswer(questionToggles[i], questionAnswers[i]);
 }

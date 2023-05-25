@@ -26,25 +26,29 @@
   font-weight: 400;
   font-size: 11px;
   line-height: 15px;
+  color: @font-color-base;
   letter-spacing: 0.12em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: @font-color-base;
   cursor: pointer;
 
   &:hover {
     opacity: 0.5;
   }
 
+  &:active {
+    opacity: 1;
+  }
+
   &::after {
     position: absolute;
     content: "";
-    width: 25px;
-    height: 25px;
     left: calc(50% - 12px);
     top: calc(20% + 7px);
-    background-image: url("../../img/icons/arrow-left.svg");
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/icons/arrow-left.svg");
     background-size: 7px 15px;
     transform: rotate(-90deg);
     background-position: 50% 50%;
@@ -66,8 +70,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -10px;
-    left: -14px;
+    top: 1px;
+    left: -39px;
 
     &::after {
       background-size: 9px 20px;

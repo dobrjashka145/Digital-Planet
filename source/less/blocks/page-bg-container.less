@@ -1,27 +1,51 @@
+.page-bg-container {
+  background-color: @black;
+}
+
 .page-bg-container--intro {
-  background-image: url("../../img/bg-intro-mask@1x.png"), url("../../img/bg-intro@1x.jpg");
+  background-image: url("../img/bg-mobile-intro@1x.jpg");
   background-size: cover;
   background-position: 50% 40%;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-mobile-intro@2x.jpg");
+  }
+
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/kid_VR@1x.png"), url("../../img/bg-intro-mask@1x.png"), url("../../img/bg-intro@1x.jpg");
+    background-image: url("../img/kid_VR@1x.png"), url("../img/bg-intro-mask@1x.png"), url("../img/bg-desktop-intro@1x.jpg");
     background-size: 32% auto, cover, cover;
-    background-position: right -5px bottom -3px, 50% 55%, 100px 55%;
+    background-position: right -5px bottom -3px, 50% 55%, 50% 55%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/kid_VR@2x.png"), url("../img/bg-intro-mask@2x.png"), url("../img/bg-desktop-intro@2x.jpg");
+    }
   }
 }
 
 .page-bg-container--inner {
-  background-image: linear-gradient(252.67deg, fade(#171a1c, 50%) 0%, fade(rgba(94, 94, 87, 0.72), 50%) 99.69%), url("../../img/bg-inner@1x.jpg");
+  background-image: url("../img/bg-mobile-inner@1x.jpg");
   background-size: cover;
   background-position: 50% 40%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   mix-blend-mode: normal;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-mobile-inner@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    background-position: 50% calc(40% + 150px);
+  }
+
   @media (min-width: @desktop-width) {
-    background-image: linear-gradient(252.67deg, fade(#171a1c, 15%) 0%, fade(rgba(94, 94, 87, 0.72), 15%) 99.69%), url("../../img/bg-inner@1x.jpg");
+    background-image: linear-gradient(252.67deg, fade(#171a1c, 35%) 0%, fade(rgba(94, 94, 87, 0.72), 35%) 99.69%), url("../img/bg-desktop-inner@1x.jpg");
     background-size: cover;
     background-position: 50% 30%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(252.67deg, fade(#171a1c, 35%) 0%, fade(rgba(94, 94, 87, 0.72), 35%) 99.69%), url("../img/bg-desktop-inner@2x.jpg");
+    }
   }
 }

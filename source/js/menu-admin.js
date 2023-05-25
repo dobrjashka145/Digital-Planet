@@ -1,7 +1,6 @@
 const navSite = document.querySelector('.main-nav');
 const contactsHeader = document.querySelector('.page-header__contacts');
 const navToggle = document.querySelector('.page-header__nav-toggle');
-
 const navbar = document.querySelector('.page-header');
 const navLinks = document.querySelectorAll('.main-nav__item');
 const navLogo = document.querySelector('.page-header__logo');
@@ -37,7 +36,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Выделяем активный пункт десктопного меню при клике на него
+// Выделяем активный пункт меню при клике на него (планшет, десктоп)
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', function() {
     activeNone();
@@ -45,26 +44,25 @@ for (let i = 0; i < navLinks.length; i++) {
   });
 };
 
-/* Убираем выделение активного пункта десктопного меню
-   по клику на логотип при переходе на главную страницу */
+/* Убираем выделение активного пункта меню по клику
+ на логотип при переходе на главную страницу (планшет, десктоп)*/
 navLogo.addEventListener('click', activeNone);
 
-// Выделяем активный пункт десктопного меню при прокрутке
+// Выделяем активный пункт меню при прокрутке (планшет, десктоп)
 window.addEventListener('scroll', function() {
-	const scrollDistance = window.scrollY;
+  const scrollDistance = window.scrollY;
   const sections = document.querySelectorAll('section');
-
-		sections.forEach(function(section, i) {
-			if (section.offsetTop - navbar.clientHeight <= scrollDistance) {
-				activeNone();
-				navLinks[i].classList.add('main-nav__item--active');
-			}
-		});
-	}
-);
+  sections.forEach(function(section, i) {
+    if (section.offsetTop - navbar.clientHeight <= scrollDistance) {
+      activeNone();
+      navLinks[i].classList.add('main-nav__item--active');
+    }
+  });
+});
 
 // Функция "Открыть мобильное меню"
 function navOpen () {
+  navbar.classList.add('page-header--opened');
   navSite.classList.remove('main-nav--closed');
   navSite.classList.add('main-nav--opened');
   contactsHeader.classList.remove('page-header__contacts--closed');
@@ -75,6 +73,7 @@ function navOpen () {
 
 // Функция "Закрыть мобильное меню"
 function navClose () {
+  navbar.classList.remove('page-header--opened');
   navSite.classList.add('main-nav--closed');
   navSite.classList.remove('main-nav--opened');
   contactsHeader.classList.add('page-header__contacts--closed');

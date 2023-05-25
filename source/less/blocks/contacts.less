@@ -24,12 +24,6 @@
 .contacts__list {
   margin: 0;
   margin-bottom: 54px;
-
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
 }
 
 .contacts__item {
@@ -43,6 +37,21 @@
 .contacts__item dd {
   margin: 0;
   margin-bottom: 5px;
+}
+
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 850px;
+    margin-bottom: 10px;
+  }
+
+  .contacts__feedback {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -71,4 +80,3 @@
     grid-row: ~"3 / 4";
   }
 }
-
